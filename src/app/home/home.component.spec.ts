@@ -2,9 +2,8 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {HomeComponent} from './home.component';
 import {TopmenuComponent} from '../topmenu/topmenu.component';
-import {WeatherService} from '../weather.service';
+import {WeatherService} from '../service/weather.service';
 import {BrowserModule, Title} from '@angular/platform-browser';
-import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 
 describe('HomeComponent', () => {

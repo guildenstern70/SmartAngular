@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import {PageComponent} from './page/page.component';
 import {HomeComponent} from './home/home.component';
-import {WeatherService} from './weather.service';
+import {WeatherService} from './service/weather.service';
 import {TopmenuComponent} from './topmenu/topmenu.component';
 
 const appRoutes: Routes = [
