@@ -10,9 +10,9 @@ import {WeatherService} from '../service/weather.service';
 export class HomeComponent implements OnInit
 {
 
-    private title: String;
-    private city: String;
-    private currentWeather: String;
+    private title: string;
+    private city: string;
+    private currentWeather: string;
 
     constructor(private titleService: Title,
                 private weather: WeatherService)
