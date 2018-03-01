@@ -1,6 +1,5 @@
 import {TestBed, inject} from '@angular/core/testing';
 import {WeatherService} from './weather.service';
-import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
 describe('WeatherService', () => {
