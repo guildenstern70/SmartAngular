@@ -9,7 +9,7 @@
  */
 
 import {Injectable} from '@angular/core';
-import {Persona} from '../model/persona';
+import {Persona} from '../models/persona';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 @Injectable()

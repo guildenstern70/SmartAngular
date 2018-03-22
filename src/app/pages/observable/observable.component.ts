@@ -10,22 +10,22 @@
 
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
-import {PersonaService} from '../service/persona.service';
+import {PersonaService} from '../../services/persona.service';
 import {Observable} from 'rxjs/Observable';
-import {Persona} from '../model/persona';
+import {Persona} from '../../models/persona';
 
 @Component({
     selector: 'app-page',
-    templateUrl: './page.component.html',
-    styleUrls: ['./page.component.css']
+    templateUrl: './observable.component.html',
+    styleUrls: ['./observable.component.css']
 })
-export class PageComponent implements OnInit
+export class ObservableComponent implements OnInit
 {
 
     constructor(private titleService: Title,
                 private personaService: PersonaService)
     {
-        this.titleService.setTitle('SmartAngular | Page');
+        this.titleService.setTitle('SmartAngular | Observable');
     }
 
     refresh()

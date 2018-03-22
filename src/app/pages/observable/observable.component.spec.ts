@@ -14,7 +14,7 @@ import {PageComponent} from './page.component';
 import {TopmenuComponent} from '../topmenu/topmenu.component';
 import {PersonaService} from '../service/persona.service';
 
-describe('PageComponent', () => {
+describe('ObservableComponent', () => {
     let component: PageComponent;
     let fixture: ComponentFixture<PageComponent>;
 
