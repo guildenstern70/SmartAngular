@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin
+ *
+ */
+
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.

@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin 
+ *
+ */
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.

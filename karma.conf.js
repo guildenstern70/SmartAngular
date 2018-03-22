@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin
+ *
+ */
+
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 

@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin
+ *
+ */
+
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 

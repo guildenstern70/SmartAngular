@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin
+ *
+ */
+
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
 
 import 'zone.js/dist/zone-testing';

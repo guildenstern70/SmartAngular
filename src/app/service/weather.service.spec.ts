@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin 
+ *
+ */
+
 import {TestBed, inject} from '@angular/core/testing';
 import {WeatherService} from './weather.service';
 import {HttpClientModule} from '@angular/common/http';

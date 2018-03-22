@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin
+ *
+ */
+
 import {TestBed, async} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {BrowserModule, Title} from '@angular/platform-browser';

@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin
+ *
+ */
+
 import {BrowserModule, Title} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 

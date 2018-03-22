@@ -1,3 +1,13 @@
+/*
+ * SmartAngular
+ * Template Angular Project
+ *
+ * Licensed under: see license.txt
+ *
+ * Copyright (c)2018 Alessio Saltarin
+ *
+ */
+
 import {Injectable} from '@angular/core';
 import {Persona} from '../model/persona';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
