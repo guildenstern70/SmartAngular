@@ -2,6 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {PageComponent} from './page.component';
 import {TopmenuComponent} from '../topmenu/topmenu.component';
+import {PersonaService} from '../service/persona.service';
 
 describe('PageComponent', () => {
     let component: PageComponent;
@@ -12,6 +13,9 @@ describe('PageComponent', () => {
             declarations: [
                 PageComponent,
                 TopmenuComponent
+            ],
+            providers: [
+                PersonaService
             ]
         })
             .compileComponents();
