@@ -1,16 +1,6 @@
-/*
- * SmartAngular
- * Template Angular Project
- *
- * Licensed under: see license.txt
- *
- * Copyright (c)2018 Alessio Saltarin
- *
- */
-
 import { AppPage } from './app.po';
 
-describe('smart-angular App', () => {
+describe('workspace-project App', () => {
   let page: AppPage;
 
   beforeEach(() => {

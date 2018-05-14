@@ -11,8 +11,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {PersonaService} from '../../services/persona.service';
-import {Observable} from 'rxjs/Observable';
 import {Persona} from '../../models/persona';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'app-page',

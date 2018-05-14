@@ -10,7 +10,8 @@
 
 import {Injectable} from '@angular/core';
 import {Persona} from '../models/persona';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {BehaviorSubject} from 'rxjs';
+
 
 @Injectable()
 export class PersonaService

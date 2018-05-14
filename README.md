@@ -2,6 +2,10 @@
 
 A template Angular project with Bootstrap4.
 
+#### Setting up Node
+
+    nodenv install
+
 #### Development server
 
 Run 
@@ -40,4 +44,3 @@ Run
     ng test
     
 to execute the unit tests via [Karma](https://karma-runner.github.io).
-
