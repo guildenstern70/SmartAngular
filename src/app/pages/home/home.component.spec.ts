@@ -11,7 +11,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {HomeComponent} from './home.component';
-import {TopmenuComponent} from '../../topmenu/topmenu.component';
+import {TopmenuComponent} from '../../components/topmenu/topmenu.component';
 import {WeatherService} from '../../services/weather.service';
 import {BrowserModule, Title} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';

@@ -11,8 +11,8 @@
 export class Persona
 {
     private id: number;
-    private name: string;
-    private surname: string;
+    private readonly name: string;
+    private readonly surname: string;
 
     static create(xid: number)
     {

@@ -10,7 +10,7 @@
 
 import {BrowserModule, Title} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AppComponent} from './app.component';
 import {TopmenuComponent} from './components/topmenu/topmenu.component';
@@ -20,8 +20,8 @@ import {ObservableComponent} from './pages/observable/observable.component';
 import {HttpClientModule} from '@angular/common/http';
 import {WeatherService} from './services/weather.service';
 import {PersonaService} from './services/persona.service';
-import { StructuralComponent } from './pages/directive/structural/structural.component';
-import { AttributeComponent } from './pages/directive/attribute/attribute.component';
+import {StructuralComponent} from './directive/structural/structural.component';
+import {AttributeComponent} from './directive/attribute/attribute.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -43,9 +43,10 @@ const appRoutes: Routes = [
     imports: [
         BrowserModule,
         HttpClientModule,
+        NgbModule.forRoot(),
         RouterModule.forRoot(
             appRoutes,
-            { useHash: true }
+            {useHash: true}
         )
     ],
     providers: [
@@ -55,6 +56,5 @@ const appRoutes: Routes = [
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule
-{
+export class AppModule {
 }

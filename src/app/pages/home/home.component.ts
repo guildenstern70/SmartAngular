@@ -17,22 +17,21 @@ import {WeatherService} from '../../services/weather.service';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit
-{
+export class HomeComponent implements OnInit {
 
     private title: string;
     private city: string;
     private currentWeather: string;
+    private showAlert = true;
 
     constructor(private titleService: Title,
-                private weather: WeatherService)
-    {
+                private weather: WeatherService) {
         this.title = 'SmartAngular';
+        this.currentWeather = '...';
         this.titleService.setTitle('SmartAngular | Home');
     }
 
-    ngOnInit()
-    {
+    ngOnInit() {
         this.weather.getWeather().subscribe(
             data => {
                 console.log(data);
@@ -47,5 +46,11 @@ export class HomeComponent implements OnInit
             }
         );
     }
+
+    public closeAlert()
+    {
+        this.showAlert = false;
+    }
+
 
 }

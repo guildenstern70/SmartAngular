@@ -13,17 +13,18 @@ import {AppComponent} from './app.component';
 import {BrowserModule, Title} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
-import {PageComponent} from './pages/page.component';
-import {HomeComponent} from './home/home.component';
+import {ObservableComponent} from './pages/observable/observable.component';
+import {HomeComponent} from './pages/home/home.component';
 import {WeatherService} from './services/weather.service';
-import {TopmenuComponent} from './topmenu/topmenu.component';
+import {TopmenuComponent} from './components/topmenu/topmenu.component';
 import {AttributeComponent} from './directive/attribute/attribute.component';
 import {StructuralComponent} from './directive/structural/structural.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
-    {path: 'page', component: PageComponent},
+    {path: 'page', component: ObservableComponent},
     {path: 'directive/structural', component: StructuralComponent},
     {path: 'directive/attribute', component: AttributeComponent},
 ];
@@ -35,11 +36,14 @@ describe('AppComponent', () => {
                 AppComponent,
                 TopmenuComponent,
                 HomeComponent,
-                PageComponent
+                ObservableComponent,
+                StructuralComponent,
+                AttributeComponent
             ],
             imports: [
                 BrowserModule,
                 HttpClientModule,
+                NgbModule.forRoot(),
                 RouterModule.forRoot(
                     appRoutes,
                     {useHash: true}

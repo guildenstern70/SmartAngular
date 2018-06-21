@@ -15,6 +15,9 @@
       <p class="lead">
           A template <b>Angular 6</b> project with Bootstrap 4
       </p>
+    <ngb-alert *ngIf="showAlert" type="success" [dismissible]="true" (close)="closeAlert()">
+        Bootstrap is working!
+    </ngb-alert>
       <hr class="my-4">
       <p>It uses Angular components, modules, services and many other...</p>
       <p class="angular_red">Current weather in {{ city }} is {{ currentWeather }}.</p>

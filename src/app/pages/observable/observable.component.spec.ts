@@ -10,18 +10,18 @@
 
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {PageComponent} from './page.component';
-import {TopmenuComponent} from '../topmenu/topmenu.component';
-import {PersonaService} from '../service/persona.service';
+import {TopmenuComponent} from '../../components/topmenu/topmenu.component';
+import {PersonaService} from '../../services/persona.service';
+import {ObservableComponent} from './observable.component';
 
 describe('ObservableComponent', () => {
-    let component: PageComponent;
-    let fixture: ComponentFixture<PageComponent>;
+    let component: ObservableComponent;
+    let fixture: ComponentFixture<ObservableComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
-                PageComponent,
+                ObservableComponent,
                 TopmenuComponent
             ],
             providers: [
@@ -32,7 +32,7 @@ describe('ObservableComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(PageComponent);
+        fixture = TestBed.createComponent(ObservableComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
