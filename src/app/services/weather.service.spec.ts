@@ -2,9 +2,9 @@
  * SmartAngular
  * Template Angular Project
  *
- * Licensed under: see license.txt
+ * Licensed under: see LICENSE
  *
- * Copyright (c)2018 Alessio Saltarin 
+ * Copyright (c)2018 Alessio Saltarin
  *
  */
 
