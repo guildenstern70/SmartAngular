@@ -1,7 +1,16 @@
+/*
+ *
+ *   SmartAngular
+ *   Template Angular Project
+ *   Licensed under: see LICENSE
+ *
+ *   Copyright (c) 2022 Alessio Saltarin
+ *
+ */
+
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {StructuralComponent} from './structural.component';
-import {TopmenuComponent} from '../../components/topmenu/topmenu.component';
 
 describe('StructuralComponent', () => {
     let component: StructuralComponent;
@@ -10,8 +19,7 @@ describe('StructuralComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
-                StructuralComponent,
-                TopmenuComponent]
+                StructuralComponent]
         })
             .compileComponents();
     }));

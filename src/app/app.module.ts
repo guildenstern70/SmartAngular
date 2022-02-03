@@ -1,60 +1,61 @@
 /*
- * SmartAngular
- * Template Angular Project
  *
- * Licensed under: see LICENSE
+ *   SmartAngular
+ *   Template Angular Project
+ *   Licensed under: see LICENSE
  *
- * Copyright (c)2018 Alessio Saltarin
+ *   Copyright (c) 2022 Alessio Saltarin
  *
  */
 
-import {BrowserModule, Title} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppComponent} from './app.component';
-import {TopmenuComponent} from './components/topmenu/topmenu.component';
-import {HomeComponent} from './pages/home/home.component';
-import {RouterModule, Routes} from '@angular/router';
-import {ObservableComponent} from './pages/observable/observable.component';
-import {HttpClientModule} from '@angular/common/http';
-import {WeatherService} from './services/weather.service';
-import {PersonaService} from './services/persona.service';
-import {StructuralComponent} from './directive/structural/structural.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './pages/home/home.component';
+import { PageOneComponent } from './pages/pageone/page-one.component';
+
+import { MatCardModule } from "@angular/material/card";
+import { MatButtonModule } from "@angular/material/button";
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { CardComponent } from './card/card.component';
+import { HttpClientModule } from "@angular/common/http";
+import { WeatherComponent } from './pages/weather/weather.component';
 import {AttributeComponent} from './directive/attribute/attribute.component';
-
-const appRoutes: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: 'home', component: HomeComponent},
-    {path: 'observable', component: ObservableComponent},
-    {path: 'directive/structural', component: StructuralComponent},
-    {path: 'directive/attribute', component: AttributeComponent},
-];
+import {StructuralComponent} from './directive/structural/structural.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        TopmenuComponent,
-        HomeComponent,
-        ObservableComponent,
-        StructuralComponent,
-        AttributeComponent
-    ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        NgbModule.forRoot(),
-        RouterModule.forRoot(
-            appRoutes,
-            {useHash: true}
-        )
-    ],
-    providers: [
-        Title,
-        WeatherService,
-        PersonaService
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    PageOneComponent,
+    NavComponent,
+    CardComponent,
+    WeatherComponent,
+    AttributeComponent,
+    StructuralComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatCardModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

@@ -1,3 +1,13 @@
+/*
+ *
+ *   SmartAngular
+ *   Template Angular Project
+ *   Licensed under: see LICENSE
+ *
+ *   Copyright (c) 2022 Alessio Saltarin
+ *
+ */
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -9,4 +19,4 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+  .catch(err => console.error(err));

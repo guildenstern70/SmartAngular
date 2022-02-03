@@ -1,32 +1,30 @@
 /*
- * SmartAngular
- * Template Angular Project
  *
- * Licensed under: see LICENSE
+ *   SmartAngular
+ *   Template Angular Project
+ *   Licensed under: see LICENSE
  *
- * Copyright (c)2018 Alessio Saltarin
+ *   Copyright (c) 2022 Alessio Saltarin
  *
  */
 
-import {TestBed, inject} from '@angular/core/testing';
-import {WeatherService} from './weather.service';
-import {HttpClientModule} from '@angular/common/http';
+import { TestBed } from '@angular/core/testing';
+
+import { WeatherService } from './weather.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('WeatherService', () => {
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            providers: [WeatherService],
-            imports: [
-                HttpClientModule
-            ],
-        });
+  let service: WeatherService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientModule],
+      providers: [WeatherService]
     });
+    service = TestBed.inject(WeatherService);
+  });
 
-    it('should be created', inject([WeatherService], (service: WeatherService) => {
-        expect(service).toBeTruthy();
-    }));
-
-    it('should get the service', inject([WeatherService], (service: WeatherService) => {
-        expect(service.getWeather()).toBeTruthy();
-    }));
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
 });

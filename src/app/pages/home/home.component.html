@@ -1,28 +1,14 @@
 <!--
-  ~ SmartAngular
-  ~ Template Angular Project
   ~
-  ~ Licensed under: see LICENSE
+  ~   SmartAngular
+  ~   Template Angular Project
+  ~   Licensed under: see LICENSE
   ~
-  ~ Copyright (c)2018 Alessio Saltarin
+  ~   Copyright (c) 2022 Alessio Saltarin
   ~
   -->
 
-<app-topmenu name="Home"></app-topmenu>
-
-<div class="jumbotron" style="margin-top: 5px">
-      <h1 class="display-4">{{ title }}</h1>
-      <p class="lead">
-          A template <b>Angular 6</b> project with Bootstrap 4
-      </p>
-    <ngb-alert *ngIf="showAlert" type="success" [dismissible]="true" (close)="closeAlert()">
-        Bootstrap is working!
-    </ngb-alert>
-      <hr class="my-4">
-      <p>It uses Angular components, modules, services and many other...</p>
-      <p class="angular_red">Current weather in {{ city }} is {{ currentWeather }}.</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" routerLink="/observable" role="button">Learn more</a>
-      </p>
-</div>
+<app-card
+  [title]="title"
+  [description]="subtitle"></app-card>
 

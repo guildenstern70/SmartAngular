@@ -1,50 +1,35 @@
 /*
- * SmartAngular
- * Template Angular Project
  *
- * Licensed under: see LICENSE
+ *   SmartAngular
+ *   Template Angular Project
+ *   Licensed under: see LICENSE
  *
- * Copyright (c)2018 Alessio Saltarin
+ *   Copyright (c) 2022 Alessio Saltarin
  *
  */
 
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {HomeComponent} from './home.component';
-import {TopmenuComponent} from '../../components/topmenu/topmenu.component';
-import {WeatherService} from '../../services/weather.service';
-import {BrowserModule, Title} from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [
-                HomeComponent,
-                TopmenuComponent
-            ],
-            providers: [
-                Title,
-                WeatherService
-            ],
-            imports: [
-                BrowserModule,
-                HttpClientModule
-            ],
-        })
-            .compileComponents();
-    }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ HomeComponent ]
+    })
+    .compileComponents();
+  });
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-    });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HomeComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
-    });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

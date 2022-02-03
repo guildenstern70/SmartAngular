@@ -1,64 +1,39 @@
 /*
- * SmartAngular
- * Template Angular Project
  *
- * Licensed under: see LICENSE
+ *   SmartAngular
+ *   Template Angular Project
+ *   Licensed under: see LICENSE
  *
- * Copyright (c)2018 Alessio Saltarin
+ *   Copyright (c) 2022 Alessio Saltarin
  *
  */
 
-import {TestBed, async} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {BrowserModule, Title} from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
-import {RouterModule, Routes} from '@angular/router';
-import {ObservableComponent} from './pages/observable/observable.component';
-import {HomeComponent} from './pages/home/home.component';
-import {WeatherService} from './services/weather.service';
-import {TopmenuComponent} from './components/topmenu/topmenu.component';
-import {AttributeComponent} from './directive/attribute/attribute.component';
-import {StructuralComponent} from './directive/structural/structural.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
-const appRoutes: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: 'home', component: HomeComponent},
-    {path: 'page', component: ObservableComponent},
-    {path: 'directive/structural', component: StructuralComponent},
-    {path: 'directive/attribute', component: AttributeComponent},
-];
+import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [
-                AppComponent,
-                TopmenuComponent,
-                HomeComponent,
-                ObservableComponent,
-                StructuralComponent,
-                AttributeComponent
-            ],
-            imports: [
-                BrowserModule,
-                HttpClientModule,
-                NgbModule.forRoot(),
-                RouterModule.forRoot(
-                    appRoutes,
-                    {useHash: true}
-                )
-            ],
-            providers: [
-                Title,
-                WeatherService
-            ],
-        }).compileComponents();
-    }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [
+        AppComponent
+      ],
+    }).compileComponents();
+  });
 
-    it('should create the app', async(() => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
-        expect(app).toBeTruthy();
-    }));
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it(`should have as title 'SmartAngular'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('SmartAngular');
+  });
+
 });

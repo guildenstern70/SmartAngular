@@ -1,29 +1,31 @@
 /*
- * SmartAngular
- * Template Angular Project
  *
- * Licensed under: see LICENSE
+ *   SmartAngular
+ *   Template Angular Project
+ *   Licensed under: see LICENSE
  *
- * Copyright (c)2018 Alessio Saltarin
+ *   Copyright (c) 2022 Alessio Saltarin
  *
  */
 
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import { HttpClient } from "@angular/common/http";
+import { WeatherModel } from "../models/WeatherModel";
 
-@Injectable()
-export class WeatherService
-{
+@Injectable({
+  providedIn: 'root'
+})
+export class WeatherService {
 
-    private URL = 'http://api.openweathermap.org/data/2.5/weather?q=Milan&APPID=fa77572aa45b2ee8be22668022e83c2c';
+  private URL = 'https://api.openweathermap.org/data/2.5/weather?q=Milan&APPID=fa77572aa45b2ee8be22668022e83c2c';
 
-    constructor(private http: HttpClient)
-    { }
+  constructor(private http: HttpClient) { }
 
-    getWeather(): Observable<Object>
-    {
-        return this.http.get(this.URL);
-    }
+  getWeather(): Observable<WeatherModel>
+  {
+    return this.http.get<WeatherModel>(this.URL);
+  }
 
 }

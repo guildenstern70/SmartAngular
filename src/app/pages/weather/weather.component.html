@@ -1,0 +1,23 @@
+<!--
+  ~
+  ~   SmartAngular
+  ~   Template Angular Project
+  ~   Licensed under: see LICENSE
+  ~
+  ~   Copyright (c) 2022 Alessio Saltarin
+  ~
+  -->
+
+<mat-card>
+  <mat-card-title>{{ title }}</mat-card-title>
+  <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
+  <mat-card-content *ngIf="wOk">
+    <img id="wicon" src="{{ wIcon }}" alt="Weather icon">
+    <h4>{{ wMain}}</h4>
+    <p>{{ wDescription}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="accent" routerLink="/home-component">Home</a>
+  </mat-card-actions>
+</mat-card>
+
